@@ -2,334 +2,483 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>실전 면접 특강 + MOS PowerPoint | 인제대학교 대학일자리플러스센터</title>
-<meta name="description" content="자격증으로 서류를 통과하고, 면접으로 합격을 완성하세요. 실전 면접 특강(10.15) · MOS PowerPoint 자격증 과정(10.12~10.16) 선착순 접수 중.">
+<meta name="description" content="자격증으로 서류를 통과하고, 면접으로 합격을 완성하세요. 실전 면접 특강 10.15.(목) · MOS PowerPoint 10.12.(월)~10.16.(금) · 두 과정 모두 선착순 마감 임박.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="🔥 실전 면접 특강 + MOS PowerPoint">
-<meta property="og:description" content="면접 특강 10.15(목) · MOS PowerPoint 10.12~10.16 · 두 과정 모두 마감 임박, 선착순 접수 중">
-<meta name="theme-color" content="#f97316">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<meta property="og:description" content="면접 특강 10.15.(목) · MOS PowerPoint 10.12.~10.16. 무료 · 두 과정 모두 마감 임박, 선착순 접수 중">
+<meta property="og:image" content="https://a8o-maker.github.io/inje7jobs/assets/hero.jpg">
+<meta name="theme-color" content="#0e2a73">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
 <style>
   :root {
-    --bg: #fffaf5;
-    --surface: #ffffff;
-    --text: #1f2328;
-    --muted: #5b6470;
-    --line: #ece4da;
-    --orange: #ea580c;
-    --orange-soft: #fff1e6;
-    --blue: #2563eb;
-    --blue-soft: #eaf1ff;
-    --red: #dc2626;
-    --red-soft: #fdecec;
-    --green-soft: #e9f8ee;
-    --radius: 18px;
+    --navy: #0e2a73;
+    --deep: #0a1f57;
+    --or: #ff7a1a;
+    --or-soft: #fff3ea;
+    --red: #e8341c;
+    --ink: #1d2333;
+    --muted: #4a5266;
+    --bg: #f4f5f9;
+    --line: #e6e9f1;
   }
-  * { box-sizing: border-box; }
+  *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
     background: var(--bg);
-    color: var(--text);
-    font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    color: var(--ink);
+    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
     line-height: 1.6;
     word-break: keep-all;
     -webkit-font-smoothing: antialiased;
   }
+  img, video { max-width: 100%; height: auto; display: block; }
   a { color: inherit; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+  .wrap { max-width: 880px; margin: 0 auto; background: #fff; padding-bottom: 96px; }
 
-  /* top banner */
-  .alert {
-    background: var(--red);
-    color: #fff;
-    text-align: center;
-    font-weight: 700;
-    font-size: 14px;
-    padding: 10px 16px;
-  }
+  .urgent { background: var(--red); color: #fff; text-align: center; font-weight: 900; padding: 11px 16px; font-size: 15px; }
+  .urgent span { display: inline-block; animation: pulse 1.4s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: .55; } }
 
-  /* hero */
-  header.hero { padding: 44px 0 28px; text-align: center; }
-  .org { font-size: 14px; color: var(--muted); font-weight: 600; margin: 0 0 14px; }
-  .hero h1 { font-size: clamp(28px, 7vw, 44px); line-height: 1.25; margin: 0 0 14px; letter-spacing: -0.02em; }
-  .hero h1 .o { color: var(--orange); }
-  .hero h1 .b { color: var(--blue); }
-  .hero p.lead { font-size: 17px; color: var(--muted); margin: 0; }
+  /* countdown bar */
+  .cd { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--deep); color: #fff; text-align: center; }
+  .cd div { padding: 12px 4px; border-right: 1px solid rgba(255,255,255,.12); }
+  .cd div:last-child { border-right: 0; }
+  .cd small { display: block; font-size: 12px; color: #aab7e0; }
+  .cd b { font-size: 20px; font-weight: 900; color: var(--or); font-variant-numeric: tabular-nums; }
 
-  /* quiz */
-  .quiz { display: grid; gap: 10px; margin: 28px 0 8px; }
-  .q {
-    border-radius: var(--radius);
-    padding: 16px 18px;
-    font-weight: 700;
-    font-size: 17px;
-  }
-  .q.o { background: var(--orange-soft); color: #9a3412; }
-  .q.b { background: var(--blue-soft); color: #1e40af; }
-  .quiz-note { text-align: center; color: var(--muted); margin: 16px 0 0; }
-  .quiz-note strong { color: var(--text); }
+  section { padding: 44px 20px; }
+  @media (min-width: 640px) { section { padding: 52px 32px; } }
+  .dark { background: var(--navy); color: #fff; }
+  .kick { color: var(--or); font-weight: 700; font-size: 13px; letter-spacing: 2px; display: flex; align-items: center; gap: 10px; }
+  .kick::before { content: ""; width: 26px; height: 2px; background: var(--or); }
+  h2 { font-size: clamp(25px, 5.4vw, 36px); line-height: 1.3; margin: 12px 0 18px; letter-spacing: -1px; font-weight: 900; }
+  h2 em { font-style: normal; color: var(--or); }
+  .lead { font-size: 16px; color: #cfd8f2; margin: 0; }
+  .muted { color: var(--muted); }
+
+  /* quick pick */
+  .pick { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 22px; }
+  .pick a { text-decoration: none; border-radius: 14px; padding: 15px 14px; font-weight: 900; font-size: 15px; line-height: 1.4; }
+  .pick a span { display: block; font-size: 12px; font-weight: 500; margin-top: 4px; }
+  .pick .a { background: var(--or); color: #fff; }
+  .pick .b { background: #fff; color: var(--navy); }
 
   /* course cards */
-  .cards { display: grid; gap: 16px; grid-template-columns: 1fr; margin: 28px 0; }
-  @media (min-width: 640px) { .cards { grid-template-columns: 1fr 1fr; } }
-  .card {
-    background: var(--surface);
-    border: 2px solid var(--line);
-    border-radius: var(--radius);
-    padding: 22px 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  .card.o { border-color: #fdba74; }
-  .card.b { border-color: #93c5fd; }
-  .card .tag {
-    align-self: flex-start;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 999px;
-    margin-bottom: 10px;
-  }
-  .card.o .tag { background: var(--orange-soft); color: var(--orange); }
-  .card.b .tag { background: var(--blue-soft); color: var(--blue); }
-  .card h2 { font-size: 22px; margin: 0 0 12px; }
-  .card dl { margin: 0 0 14px; display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: 15px; }
-  .card dt { color: var(--muted); font-weight: 600; }
-  .card dd { margin: 0; font-weight: 600; }
-  .perks { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; padding: 0; list-style: none; }
-  .perks li { font-size: 13px; font-weight: 600; background: #f5f2ee; padding: 4px 10px; border-radius: 999px; }
-  .hot { color: var(--red); font-weight: 800; font-size: 15px; margin: 0 0 14px; }
-  .countdown { font-size: 14px; color: var(--muted); margin: 0 0 16px; }
-  .countdown b { color: var(--red); font-variant-numeric: tabular-nums; }
-  .btn {
-    margin-top: auto;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 17px;
-    color: #fff;
-    padding: 15px 16px;
-    border-radius: 14px;
-    transition: transform .1s ease, filter .15s ease;
-  }
-  .btn:hover { filter: brightness(1.06); }
-  .btn:active { transform: scale(.98); }
-  .btn.o { background: var(--orange); }
-  .btn.b { background: var(--blue); }
-  .sub { font-size: 13px; color: var(--muted); text-align: center; margin: 10px 0 0; }
+  .courses { display: grid; gap: 18px; }
+  @media (min-width: 760px) { .courses { grid-template-columns: 1fr 1fr; } }
+  .course { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; background: #fff; }
+  .course img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .course .body { padding: 18px 18px 20px; display: flex; flex-direction: column; flex: 1; }
+  .course h3 { margin: 0 0 10px; font-size: 21px; letter-spacing: -.5px; }
+  .course .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px; margin-bottom: 8px; }
+  .course.iv .badge { background: var(--or-soft); color: var(--or); }
+  .course.mos .badge { background: #e8edfb; color: var(--navy); }
 
-  /* sections */
-  section { margin: 44px 0; }
-  section h3 { font-size: 22px; margin: 0 0 14px; color: var(--orange); letter-spacing: -0.01em; }
-  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
-  .ai p { margin: 0 0 8px; }
-  .ai p:last-child { margin: 0; }
-
-  .check { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
-  .check li { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px 14px 46px; position: relative; }
-  .check li::before {
-    content: ""; position: absolute; left: 16px; top: 17px;
-    width: 18px; height: 18px; border: 2px solid #c9bfb3; border-radius: 5px;
-  }
-  .ok { margin-top: 12px; background: var(--green-soft); color: #166534; font-weight: 700; border-radius: 14px; padding: 14px 16px; }
-
-  /* schedule table */
   table { width: 100%; border-collapse: collapse; font-size: 15px; }
-  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
-  th { color: var(--muted); font-weight: 700; white-space: nowrap; width: 1%; }
-  tr:last-child th, tr:last-child td { border-bottom: 0; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td:first-child { width: 78px; font-weight: 900; color: var(--navy); background: #fff6cc; white-space: nowrap; }
+  .hot { color: var(--red); font-weight: 900; }
 
-  /* faq */
-  details { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 10px; }
-  summary { cursor: pointer; padding: 15px 16px; font-weight: 700; list-style: none; position: relative; padding-right: 40px; }
-  summary::-webkit-details-marker { display: none; }
-  summary::after { content: "+"; position: absolute; right: 16px; top: 12px; font-size: 20px; color: var(--muted); }
-  details[open] summary::after { content: "–"; }
-  details p { margin: 0; padding: 0 16px 16px; color: var(--muted); }
-
-  .final { background: var(--red-soft); border-radius: var(--radius); padding: 22px 20px; text-align: center; }
-  .final strong { display: block; font-size: 18px; margin-bottom: 6px; }
-  .final p { margin: 0 0 18px; color: var(--muted); }
-  .final .btns { display: grid; gap: 10px; }
-  @media (min-width: 640px) { .final .btns { grid-template-columns: 1fr 1fr; } }
-
-  footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 24px 0 110px; font-size: 14px; color: var(--muted); text-align: center; }
-  footer p { margin: 4px 0; }
-
-  /* sticky mobile CTA */
-  .sticky {
-    position: fixed; left: 0; right: 0; bottom: 0;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
-    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
-    background: rgba(255, 250, 245, .94);
-    backdrop-filter: blur(8px);
-    border-top: 1px solid var(--line);
-    z-index: 10;
+  .btn {
+    display: block; text-align: center; text-decoration: none; font-weight: 900; font-size: 17px; color: #fff;
+    padding: 15px 18px; border-radius: 999px; margin-top: 16px;
+    transition: filter .15s ease, transform .1s ease;
   }
-  .sticky .btn { font-size: 15px; padding: 13px 8px; }
-  @media (min-width: 900px) { .sticky { display: none; } footer { padding-bottom: 32px; } }
+  .btn:hover { filter: brightness(1.08); }
+  .btn:active { transform: scale(.98); }
+  .btn.red { background: var(--red); box-shadow: 0 8px 20px rgba(232,52,28,.3); }
+  .btn.navy { background: var(--navy); box-shadow: 0 8px 20px rgba(14,42,115,.25); }
+  .btn.inline { display: inline-block; padding: 15px 32px; }
+  .pop { animation: pop 2.2s ease-in-out infinite; }
+  @keyframes pop { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+  .sub { font-size: 13px; color: #8a93a8; text-align: center; margin: 10px 0 0; }
+
+  /* videos */
+  .vid { background: linear-gradient(180deg, var(--deep), var(--navy)); }
+  .clips { display: grid; gap: 22px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .clips { grid-template-columns: 1fr 1fr; } }
+  figure { margin: 0; }
+  .vwrap { position: relative; border-radius: 14px; overflow: hidden; background: #000; aspect-ratio: 16 / 9; transition: box-shadow .3s, transform .3s; }
+  .vwrap video { width: 100%; height: 100%; object-fit: cover; }
+  .vwrap.playing { box-shadow: 0 0 0 3px var(--or); transform: scale(1.01); }
+  .tag { position: absolute; left: 10px; top: 10px; background: var(--or); color: #fff; font-weight: 900; font-size: 13px; padding: 2px 10px; border-radius: 999px; pointer-events: none; }
+  figcaption { padding: 10px 2px 0; display: flex; flex-direction: column; gap: 2px; }
+  figcaption b { font-size: 17px; color: #fff; letter-spacing: -.4px; }
+  figcaption span { font-size: 14px; color: #cfd8f2; }
+  figcaption small { font-size: 12px; color: #8da0d6; }
+  .bridge { margin-top: 26px; background: rgba(255,255,255,.08); border-left: 4px solid var(--or); border-radius: 10px; padding: 16px 18px; font-size: 15px; }
+  .bridge b { color: var(--or); }
+
+  /* AI section */
+  .ai p { margin: 0 0 6px; font-size: 16px; }
+  .ai .punch { margin-top: 16px; font-size: 18px; font-weight: 900; }
+  .ai .punch em { font-style: normal; color: var(--or); }
+
+  /* checklist */
+  .check { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .check li { background: var(--bg); border-radius: 12px; padding: 13px 16px 13px 48px; position: relative; font-size: 15px; }
+  .check li::before { content: "✓"; position: absolute; left: 16px; top: 13px; width: 22px; height: 22px; border-radius: 50%; background: var(--or); color: #fff; font-weight: 900; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+  .check li b { color: var(--navy); }
+  .note { margin-top: 14px; background: #e9f7ee; color: #18663a; border-radius: 12px; padding: 14px 16px; font-weight: 700; }
+
+  /* question cards */
+  .cards { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 20px 12px; margin: 0 -20px; -webkit-overflow-scrolling: touch; }
+  .cards img { width: min(76vw, 320px); flex: 0 0 auto; border-radius: 16px; scroll-snap-align: start; box-shadow: 0 8px 24px rgba(14,42,115,.18); }
+  @media (min-width: 640px) { .cards { margin: 0 -32px; padding-left: 32px; padding-right: 32px; } }
+  .hint { font-size: 13px; color: #8a93a8; margin-top: 4px; }
+
+  /* timeline */
+  .timeline { display: grid; gap: 12px; }
+  .slot { display: grid; grid-template-columns: 96px 1fr; gap: 12px; background: var(--bg); border-radius: 14px; padding: 14px 16px; }
+  .slot .time { font-weight: 900; color: var(--or); font-variant-numeric: tabular-nums; font-size: 14px; }
+  .slot b { display: block; color: var(--navy); }
+  .slot p { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
+  .slot .chip { display: inline-block; font-size: 11px; font-weight: 700; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; margin-top: 6px; color: var(--muted); }
+
+  /* mos steps */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+  .step { background: #fff; border-radius: 14px; padding: 14px; border: 1px solid #ffd9bf; }
+  .step b { display: block; color: var(--or); font-size: 13px; }
+  .step span { font-weight: 700; font-size: 15px; }
+
+  .benefit img { border-radius: 16px; width: 100%; max-width: 480px; margin: 0 auto; }
+
+  /* how to apply */
+  .apply { display: grid; gap: 12px; }
+  @media (min-width: 640px) { .apply { grid-template-columns: 1fr 1fr; } }
+  .way { border-radius: 16px; padding: 18px; }
+  .way.w1 { background: #e8edfb; }
+  .way.w2 { background: var(--or-soft); }
+  .way h4 { margin: 0 0 6px; font-size: 16px; }
+  .way p { margin: 0; font-size: 14px; color: var(--muted); }
+  .way .big { display: block; margin-top: 10px; font-size: 22px; font-weight: 900; color: var(--ink); text-decoration: none; }
+  .warn { margin-top: 14px; background: var(--bg); border-radius: 12px; padding: 14px 16px; font-size: 14px; color: var(--muted); }
+  .warn ul { margin: 6px 0 0; padding-left: 18px; }
+
+  /* next course */
+  .next { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+  .nc { border-radius: 14px; padding: 16px; border: 1px solid var(--line); }
+  .nc b { display: block; font-size: 16px; }
+  .nc span { font-size: 13px; color: var(--muted); }
+  .nc a { display: inline-block; margin-top: 8px; font-size: 14px; font-weight: 700; color: var(--navy); }
+  .nc.closed { background: var(--bg); color: #8a93a8; }
+
+  details { background: var(--bg); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
+  summary { font-weight: 700; cursor: pointer; }
+  details p { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+
+  .final { text-align: center; }
+  .final .two { display: grid; gap: 10px; max-width: 520px; margin: 0 auto; }
+  @media (min-width: 640px) { .final .two { grid-template-columns: 1fr 1fr; } }
+
+  footer { text-align: center; font-size: 13px; color: #8a93a8; padding: 24px 20px; }
+  footer p { margin: 3px 0; }
+  footer a { color: inherit; }
+
+  .sticky {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+    max-width: 880px; margin: 0 auto;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: rgba(10,31,87,.96);
+  }
+  .sticky a { text-align: center; text-decoration: none; font-weight: 900; font-size: 15px; color: #fff; padding: 12px 6px; border-radius: 999px; }
+  .sticky .s1 { background: var(--red); }
+  .sticky .s2 { background: #fff; color: var(--navy); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .urgent span, .pop { animation: none; }
+    html { scroll-behavior: auto; }
+  }
 </style>
 </head>
 <body>
-
-<div class="alert">🚨 두 과정 모두 마감 임박 · 선착순 접수 중</div>
-
 <div class="wrap">
-  <header class="hero">
-    <p class="org">인제대학교 대학일자리플러스센터</p>
-    <h1><span class="o">실전 면접 특강</span><br>+ <span class="b">MOS PowerPoint</span></h1>
-    <p class="lead">자격증으로 서류를 통과하고, 면접으로 합격을 완성하세요.</p>
 
-    <div class="quiz">
-      <div class="q o">Q1. 너 1분 자기소개, 지금 바로 할 자신 있어?</div>
-      <div class="q b">Q2. 조별과제 PPT 빌런 안 될 자신 있어?</div>
-    </div>
-    <p class="quiz-note">둘 중 하나라도 "음…" 했다면, 이번 주가 기회입니다.<br><strong>자기소개는 실전 면접 특강에서, PPT는 MOS PowerPoint에서</strong> 해결하세요.</p>
-  </header>
-
-  <div class="cards">
-    <article class="card o" id="interview">
-      <span class="tag">🎤 1day 실전 취업 클리닉</span>
-      <h2>실전 면접 특강</h2>
-      <dl>
-        <dt>일시</dt><dd>10. 15.(목) 13:00~15:00</dd>
-        <dt>장소</dt><dd>E동 228호</dd>
-        <dt>인원</dt><dd>20명 소수정예 선착순</dd>
-        <dt>마감</dt><dd>10. 14.(수) 23:00</dd>
-      </dl>
-      <ul class="perks">
-        <li>🏅 인제스타 마일리지 2점</li>
-        <li>📜 수료증</li>
-        <li>📝 공인결석</li>
-      </ul>
-      <p class="countdown" data-deadline="2026-10-14T23:00:00+09:00">접수 마감까지 <b>—</b></p>
-      <a class="btn o" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000717&amp;dept=03474&amp;no=22&amp;mc=0391" target="_blank" rel="noopener">👉 면접 특강 신청하기</a>
-      <p class="sub">문자 접수: <a href="sms:010-7203-7677">010-7203-7677</a><br>"참가 희망(면접), 성함, 학번"</p>
-    </article>
-
-    <article class="card b" id="mos">
-      <span class="tag">📊 자격증 과정 · 수강료 무료</span>
-      <h2>MOS PowerPoint</h2>
-      <dl>
-        <dt>일정</dt><dd>10. 12.(월) ~ 10. 16.(금)</dd>
-        <dt>시간</dt><dd>매일 18:00~21:00 (5일)</dd>
-        <dt>비용</dt><dd>무료</dd>
-      </dl>
-      <ul class="perks">
-        <li>🔥 지난 수강생 100% 합격</li>
-        <li>🌙 정규 수업 후 저녁 운영</li>
-      </ul>
-      <p class="hot">남은 자리 얼마 없음</p>
-      <p class="countdown" data-deadline="2026-10-12T18:00:00+09:00">개강까지 <b>—</b></p>
-      <a class="btn b" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000666&amp;dept=03917&amp;no=18&amp;mc=0152" target="_blank" rel="noopener">👉 MOS PowerPoint 신청하기</a>
-      <p class="sub">신청 후 포기하면 패널티가 있으니,<br>끝까지 들을 수 있는 분만 신청해 주세요.</p>
-    </article>
+  <div class="urgent"><span>🚨 두 과정 모두 마감 임박 · 선착순 접수 중</span></div>
+  <img src="assets/hero.jpg" alt="서류 합격 다음, 합격을 결정하는 마지막 문 — 실전 면접. 10.15.(목) 마일리지 2점·수료증·공인결석" width="1400" height="788">
+  <div class="cd">
+    <div><small>MOS PowerPoint 개강</small><b data-to="2026-10-12T18:00:00+09:00" data-mode="dday">D-?</b></div>
+    <div><small>면접 특강 접수 마감</small><b data-to="2026-10-14T23:00:00+09:00" data-mode="clock">--:--:--</b></div>
+    <div><small>실전 면접 특강</small><b data-to="2026-10-15T13:00:00+09:00" data-mode="dday">D-?</b></div>
   </div>
 
+  <!-- Q1 / Q2 -->
+  <section class="dark">
+    <div class="kick">솔직하게 답해 보세요</div>
+    <h2 style="margin-bottom:8px">Q1. 너 <em>1분 자기소개</em>,<br>지금 바로 할 자신 있어?</h2>
+    <h2 style="margin-top:0">Q2. 조별과제 <em>PPT 빌런</em><br>안 될 자신 있어?</h2>
+    <p class="lead">둘 중 하나라도 "음…" 했다면, 이번 주가 기회입니다.<br>자기소개는 <b style="color:#fff">실전 면접 특강</b>에서, PPT는 <b style="color:#fff">MOS PowerPoint</b>에서 해결하세요.</p>
+    <div class="pick">
+      <a class="a" href="#interview">🎤 자기소개 자신 없다면<span>면접 특강 10. 15.(목) →</span></a>
+      <a class="b" href="#mos">📊 PPT 빌런 탈출하려면<span>MOS PowerPoint 무료 →</span></a>
+    </div>
+  </section>
+
+  <!-- two courses -->
+  <section>
+    <div class="kick">이번 주 두 과정</div>
+    <h2>자격증으로 서류를 통과하고,<br><em>면접으로 합격</em>을 완성하세요</h2>
+    <div class="courses">
+      <article class="course iv" id="interview">
+        <img src="assets/card1.jpg" alt="면접장에서 꼭 나오는 질문 Q1. 1분 자기소개" loading="lazy" style="object-position:center 40%">
+        <div class="body">
+          <span class="badge">🎤 1day 실전 취업 클리닉</span>
+          <h3>실전 면접 특강</h3>
+          <table>
+            <tr><td>일시</td><td>2026. 10. 15.(목) 13:00~15:00</td></tr>
+            <tr><td>장소</td><td>E동 228호 (대면 강의·실습)</td></tr>
+            <tr><td>인원</td><td>20명 소수정예 <span class="hot">선착순</span></td></tr>
+            <tr><td>대상</td><td>재학생·졸업생·지역청년</td></tr>
+            <tr><td>혜택</td><td>마일리지 2점 · 수료증 · 공인결석</td></tr>
+            <tr><td>마감</td><td class="hot">10. 14.(수) 23:00</td></tr>
+          </table>
+          <div style="margin-top:auto">
+            <a class="btn red pop" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000717&amp;dept=03474&amp;no=22&amp;mc=0391" target="_blank" rel="noopener">👉 면접 특강 신청하기</a>
+          </div>
+        </div>
+      </article>
+      <article class="course mos" id="mos">
+        <img src="assets/mos.jpg" alt="MOS PowerPoint 들으면 합격! 5일 15시간 완성, 지난 과정 수강생 100% 합격" loading="lazy" width="1200" height="675">
+        <div class="body">
+          <span class="badge">📊 디지털 오피스 실무역량 · 수강료 무료</span>
+          <h3>MOS PowerPoint 자격증 과정</h3>
+          <table>
+            <tr><td>일정</td><td>10. 12.(월) ~ 10. 16.(금)</td></tr>
+            <tr><td>시간</td><td>매일 18:00~21:00 (5일 15시간)</td></tr>
+            <tr><td>인원</td><td>20명 <span class="hot">선착순</span></td></tr>
+            <tr><td>대상</td><td>인제대학교 재학생 누구나</td></tr>
+            <tr><td>실적</td><td>지난 과정 수강생 <span class="hot">100% 합격</span></td></tr>
+            <tr><td>잔여</td><td class="hot">남은 자리 얼마 없음</td></tr>
+          </table>
+          <div style="margin-top:auto">
+            <a class="btn navy" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000666&amp;dept=03917&amp;no=18&amp;mc=0152" target="_blank" rel="noopener">👉 MOS PowerPoint 신청하기</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- videos -->
+  <section class="dark vid">
+    <div class="kick">20초 만에 보는 면접 꿀팁</div>
+    <h2>탭 한 번, <em>20초</em>면<br>면접이 달라집니다</h2>
+    <div class="clips">
+      <figure>
+        <div class="vwrap"><video src="assets/v1.mp4" poster="assets/v1.jpg" controls playsinline preload="none"></video><span class="tag">01</span></div>
+        <figcaption><b>학벌·스펙이 아니다, 면접관이 진짜 보는 것</b><span>29년 차 대기업 임원이 말하는 면접의 기준</span><small>출처: 장동철 작가 인터뷰 영상</small></figcaption>
+      </figure>
+      <figure>
+        <div class="vwrap"><video src="assets/v2.mp4" poster="assets/v2.jpg" controls playsinline preload="none"></video><span class="tag">02</span></div>
+        <figcaption><b>면접 전 꼭 준비할 키워드 2개</b><span>어떤 질문에도 흔들리지 않는 답변의 뼈대</span><small>출처: AND 유튜브 채널</small></figcaption>
+      </figure>
+      <figure>
+        <div class="vwrap"><video src="assets/v3.mp4" poster="assets/v3.jpg" controls playsinline preload="none"></video><span class="tag">03</span></div>
+        <figcaption><b>면접관 앞에서 떨지 않는 법</b><span>잘 보이려 할수록 긴장되는 이유</span><small>출처: tvN 유 퀴즈 온 더 블럭 EP.269</small></figcaption>
+      </figure>
+      <figure>
+        <div class="vwrap"><video src="assets/v4.mp4" poster="assets/v4.jpg" controls playsinline preload="none"></video><span class="tag">04</span></div>
+        <figcaption><b>공공기관 면접, 인사담당자가 말한다</b><span>19년 차 공기업 인사담당자의 현장 강연 중에서</span><small>출처: 2020 공공기관 채용정보 박람회</small></figcaption>
+      </figure>
+    </div>
+    <div class="bridge"><b>영상으로 감을 잡았다면, 이제 직접 말해 볼 차례입니다.</b><br>보는 것과 말해 보는 것은 다릅니다. 직접 답하고 피드백받는 연습은 특강에서만 가능합니다.</div>
+  </section>
+
+  <!-- AI -->
   <section class="ai">
-    <h3>GPT도 제미나이도 대신해 줄 수 없는 것</h3>
-    <div class="panel">
-      <p>자기소개서는 GPT가 써 주고, 예상 질문은 제미나이가 뽑아 줍니다.</p>
-      <p>그런데 면접장 문을 열고 들어가는 순간, AI는 따라 들어갈 수 없습니다.</p>
-      <p>모두가 AI로 같은 답을 준비할 때, <strong>직접 말해 보고 피드백받은 사람만 면접장에서 달라 보입니다.</strong></p>
-    </div>
+    <div class="kick">AI 시대의 면접</div>
+    <h2>GPT도 제미나이도<br><em>대신해 줄 수 없는 것</em></h2>
+    <p>자기소개서는 GPT가 써 주고, 예상 질문은 제미나이가 뽑아 줍니다.</p>
+    <p>그런데 면접장 문을 열고 들어가는 순간, AI는 따라 들어갈 수 없습니다.</p>
+    <p class="punch">모두가 AI로 같은 답을 준비할 때,<br><em>직접 말해 보고 피드백받은 사람</em>만 면접장에서 달라 보입니다.</p>
   </section>
 
-  <section>
-    <h3>이런 학생이라면 꼭 신청하세요</h3>
+  <!-- who -->
+  <section style="padding-top:0">
+    <div class="kick">이런 학생이라면</div>
+    <h2>하나라도 해당되면,<br><em>지금이 신청할 때</em>입니다</h2>
     <ul class="check">
-      <li>서류는 붙었는데 <strong>면접은 한 번도 보지 못한</strong> 학생</li>
-      <li>이력서 <strong>자격증 칸이 비어 있는</strong> 학생</li>
-      <li>"1분 자기소개 해 주세요"에 <strong>자신 있게 답할 수 없는</strong> 학생</li>
-      <li>팀플·과제 발표 자료를 <strong>매번 밤새워 만드는</strong> 학생</li>
+      <li>서류는 붙었는데 <b>면접은 한 번도 보지 못한</b> 학생</li>
+      <li>"1분 자기소개 해 주세요"에 <b>자신 있게 답할 수 없는</b> 학생</li>
+      <li>사람 앞에서 말할 때 <b>긴장해서 머릿속이 하얘지는</b> 학생</li>
+      <li>인턴십·서포터즈·현장실습·해외연수 <b>선발 면접을 앞둔</b> 학생</li>
+      <li>이력서 <b>자격증 칸이 비어 있는</b> 학생</li>
+      <li>팀플·과제 발표 자료를 <b>매번 밤새워 만드는</b> 학생</li>
     </ul>
-    <div class="ok">✅ 하나라도 해당된다면, 지금이 신청할 때입니다.</div>
+    <div class="note">✅ 위 4개는 면접 특강, 아래 2개는 MOS PowerPoint가 답입니다.</div>
   </section>
 
-  <section>
-    <h3>면접 특강 세부 일정</h3>
-    <div class="panel">
-      <table>
-        <tr>
-          <th>13:00~14:00</th>
-          <td><strong>면접 기초 &amp; 이미지메이킹</strong><br>면접의 이해, 호감도 높은 이미지 연출법, 기본 자세 실습</td>
-        </tr>
-        <tr>
-          <th>14:00~15:00</th>
-          <td><strong>면접 유형 &amp; 답변 피드백</strong><br>최신 면접 유형별 대응 전략, 개인/그룹별 답변 피드백</td>
-        </tr>
-      </table>
+  <!-- question cards -->
+  <section style="padding-top:0">
+    <div class="kick">면접장에서 꼭 나오는 질문</div>
+    <h2>다섯 가지 질문,<br><em>미리 연습</em>합니다</h2>
+    <div class="cards">
+      <img src="assets/card1.jpg" alt="Q1. 1분 자기소개 — 첫인상을 결정하는 60초" loading="lazy">
+      <img src="assets/card2.jpg" alt="Q2. 지원 동기" loading="lazy">
+      <img src="assets/card3.jpg" alt="Q3. 직무 역량 질문" loading="lazy">
+      <img src="assets/card4.jpg" alt="Q4. 돌발 질문" loading="lazy">
+      <img src="assets/card5.jpg" alt="Q5. 마지막 한마디" loading="lazy">
+    </div>
+    <div class="hint">옆으로 넘겨 보세요 →</div>
+  </section>
+
+  <!-- interview timeline -->
+  <section style="padding-top:0">
+    <div class="kick">면접 특강 세부 일정</div>
+    <h2>단 2시간,<br><em>실제처럼 말해 보고</em> 바로 피드백</h2>
+    <div class="timeline">
+      <div class="slot">
+        <div class="time">13:00~14:00</div>
+        <div><b>면접 기초 &amp; 이미지메이킹</b><p>면접의 이해, 호감도 높은 이미지 연출법<br>면접관의 시선을 사로잡는 기본 자세 실습</p><span class="chip">강의 및 실습</span></div>
+      </div>
+      <div class="slot">
+        <div class="time">14:00~15:00</div>
+        <div><b>면접 유형 &amp; 답변 피드백</b><p>최신 면접 유형별 특징 분석 및 대응 전략<br>개인/그룹별 실전 답변 피드백</p><span class="chip">실전 클리닉</span></div>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h3>자주 묻는 질문</h3>
-    <details>
-      <summary>면접 경험이 전혀 없어도 들을 수 있나요?</summary>
-      <p>물론입니다. 면접이 처음인 학생일수록 얻어 가는 것이 더 많습니다.</p>
-    </details>
-    <details>
-      <summary>MOS는 컴퓨터를 잘 못해도 들을 수 있나요?</summary>
-      <p>네. 기본 환경부터 기출문제와 실전 모의테스트까지 5일 동안 단계별로 진행합니다.</p>
-    </details>
-    <details>
-      <summary>수업과 겹치면 어떻게 하나요?</summary>
-      <p>면접 특강은 공인결석을 신청할 수 있습니다(당일 출석부 비고란에 '공인결석 필요' 작성). MOS는 정규 수업이 끝난 저녁 시간에 운영됩니다.</p>
-    </details>
-    <details>
-      <summary>미리 준비해 올 것이 있나요?</summary>
-      <p>작성해 둔 이력서나 자기소개서가 있다면 면접 특강에 가져오세요. 내 서류를 바탕으로 연습하면 훨씬 실전적입니다. 없어도 괜찮습니다.</p>
-    </details>
-    <details>
-      <summary>신청했는데 못 가게 되면요?</summary>
-      <p>불참 시 비교과프로그램 참여가 제한될 수 있습니다. 부득이한 경우 1일 전까지 대학일자리플러스센터로 연락 주세요.</p>
-    </details>
+  <!-- MOS detail -->
+  <section style="background:var(--or-soft)">
+    <div class="kick">MOS PowerPoint 과정</div>
+    <h2>컴퓨터를 잘 못해도,<br><em>5일이면 자격증</em></h2>
+    <div class="steps">
+      <div class="step"><b>STEP 1</b><span>기본 환경 익히기</span></div>
+      <div class="step"><b>STEP 2</b><span>기능별 실습</span></div>
+      <div class="step"><b>STEP 3</b><span>기출문제 풀이</span></div>
+      <div class="step"><b>STEP 4</b><span>실전 모의테스트</span></div>
+    </div>
+    <p class="muted" style="margin:16px 0 0;font-size:15px">정규 수업이 끝난 저녁 18:00~21:00에 운영해 수업과 겹치지 않습니다. 지난 MOS 과정은 모집 즉시 마감됐고, 수강생 전원이 합격했습니다.</p>
+    <a class="btn navy" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000666&amp;dept=03917&amp;no=18&amp;mc=0152" target="_blank" rel="noopener">👉 MOS PowerPoint 신청하기</a>
+    <p class="sub">신청 후 포기하면 패널티가 있으니, 끝까지 들을 수 있는 분만 신청해 주세요.</p>
   </section>
 
-  <section class="final">
-    <strong>⏰ 서류에 붙고 면접에서 떨어지면 처음으로 돌아갑니다.</strong>
-    <p>두 과정 모두 선착순 마감입니다. 자리가 남아 있을 때 지금 신청하세요.</p>
-    <div class="btns">
-      <a class="btn o" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000717&amp;dept=03474&amp;no=22&amp;mc=0391" target="_blank" rel="noopener">👉 면접 특강 신청</a>
-      <a class="btn b" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000666&amp;dept=03917&amp;no=18&amp;mc=0152" target="_blank" rel="noopener">👉 MOS PowerPoint 신청</a>
+  <!-- benefits -->
+  <section class="benefit">
+    <div class="kick">면접 특강 참여 혜택</div>
+    <h2>듣기만 해도<br><em>남는 것</em>이 있습니다</h2>
+    <img src="assets/benefit.jpg" alt="참여 혜택: 실전 면접 연습과 피드백, 인제스타 마일리지 2점, 수료증, 공인결석 신청 가능" loading="lazy">
+    <table style="margin-top:20px">
+      <tr><td>수료 조건</td><td>사전 역량진단(강의 전) + 사후 역량진단·만족도 조사(강의 후) 모두 참여 시 수료증 발급</td></tr>
+      <tr><td>공인결석</td><td>교육 시간(13:00~15:00) 공인결석이 필요하면 당일 출석부 '비고'란에 <b>'공인결석 필요'</b> 기재</td></tr>
+    </table>
+  </section>
+
+  <!-- how to apply -->
+  <section style="padding-top:0">
+    <div class="kick">신청 방법</div>
+    <h2>신청은 <em>1분</em>이면 끝</h2>
+    <div class="apply">
+      <div class="way w1">
+        <h4>💻 방법 ① IU-나비 신청</h4>
+        <p>로그인 후 신청 화면으로 바로 이동합니다.</p>
+        <a class="btn red" style="margin-top:12px" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000717&amp;dept=03474&amp;no=22&amp;mc=0391" target="_blank" rel="noopener">면접 특강 신청</a>
+        <a class="btn navy" style="margin-top:8px" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000666&amp;dept=03917&amp;no=18&amp;mc=0152" target="_blank" rel="noopener">MOS PowerPoint 신청</a>
+      </div>
+      <div class="way w2">
+        <h4>💬 방법 ② 문자 간편 접수 (면접 특강)</h4>
+        <p>"참가 희망(면접), 성함, 학번"을 보내 주세요.</p>
+        <a class="big" href="sms:010-7203-7677">010-7203-7677</a>
+        <p style="margin-top:6px">모집 마감 10. 14.(수) 23:00</p>
+      </div>
+    </div>
+    <div class="warn">
+      <b>신청 유의사항</b>
+      <ul>
+        <li>소수정예 밀착 피드백 과정이라, 신청 후 무단 불참(노쇼) 시 향후 비교과 프로그램 참여가 제한될 수 있습니다.</li>
+        <li>부득이하게 참석이 어려우면 최소 1일 전까지 취소하고 담당자에게 연락해 주세요.</li>
+      </ul>
     </div>
   </section>
+
+  <!-- next MOS courses -->
+  <section style="padding-top:0">
+    <div class="kick">이어서 들을 수 있는 MOS 과정</div>
+    <h2>PowerPoint 다음은<br><em>Word</em>로 이어 가세요</h2>
+    <div class="next">
+      <div class="nc">
+        <b>📝 MOS Word</b>
+        <span>11. 2.(월) ~ 11. 6.(금) · 무료</span><br>
+        <span class="hot" style="font-size:13px">잔여 소수</span><br>
+        <a href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000666&amp;dept=03917&amp;no=19&amp;mc=0152" target="_blank" rel="noopener">신청하기 →</a>
+      </div>
+      <div class="nc closed">
+        <b>🔒 MOS Excel</b>
+        <span>11. 9.(월) ~ 11. 13.(금)</span><br>
+        <span style="font-size:13px;font-weight:700">선착순 마감</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding-top:0">
+    <div class="kick">자주 묻는 질문</div>
+    <h2 style="font-size:26px">궁금한 점이 있다면</h2>
+    <details><summary>면접 경험이 전혀 없어도 들을 수 있나요?</summary><p>물론입니다. 면접이 처음인 학생일수록 얻어 가는 것이 더 많습니다.</p></details>
+    <details><summary>MOS는 컴퓨터를 잘 못해도 들을 수 있나요?</summary><p>네. 기본 환경부터 기출문제와 실전 모의테스트까지 5일 동안 단계별로 진행합니다.</p></details>
+    <details><summary>미리 준비해 올 것이 있나요?</summary><p>면접 특강에는 작성해 둔 이력서나 자기소개서가 있다면 가져오세요. 내 서류를 바탕으로 답변을 연습하면 훨씬 실전적입니다. 없어도 괜찮습니다.</p></details>
+    <details><summary>수업과 겹치면 어떻게 하나요?</summary><p>면접 특강은 공인결석을 신청할 수 있습니다(당일 출석부 비고란에 '공인결석 필요' 작성). MOS는 정규 수업이 끝난 저녁 시간에 운영됩니다.</p></details>
+    <details><summary>두 과정을 모두 신청해도 되나요?</summary><p>네. 면접 특강(10.15. 낮)과 MOS PowerPoint(10.12.~16. 저녁)는 시간이 겹치지 않아 함께 들을 수 있습니다. 각각 따로 신청해 주세요.</p></details>
+    <details><summary>신청했는데 못 가게 되면요?</summary><p>불참 시 비교과프로그램 참여가 제한될 수 있습니다. 부득이한 경우 1일 전까지 대학일자리플러스센터로 연락 주세요.</p></details>
+  </section>
+
+  <!-- final CTA -->
+  <section class="dark final">
+    <h2>서류에 붙고 면접에서 떨어지면<br><em>처음으로 돌아갑니다</em></h2>
+    <p class="lead" style="margin-bottom:22px">두 과정 모두 선착순 마감입니다. 자리가 남아 있을 때 지금 신청하세요.</p>
+    <div class="two">
+      <a class="btn red pop" style="margin-top:0" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000717&amp;dept=03474&amp;no=22&amp;mc=0391" target="_blank" rel="noopener">🎤 면접 특강 신청</a>
+      <a class="btn" style="margin-top:0;background:#fff;color:var(--navy)" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000666&amp;dept=03917&amp;no=18&amp;mc=0152" target="_blank" rel="noopener">📊 MOS PowerPoint 신청</a>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>문의</b> 늘빛관 1층 대학일자리플러스센터 · <a href="tel:055-320-3744">055-320-3744</a> (교내 3744)</p>
+    <p>문세화 컨설턴트 · 카카오톡 ID <b>7jobs</b></p>
+    <p style="margin-top:10px">영상은 각 출처의 원본에서 일부 장면을 소개한 것입니다.</p>
+  </footer>
 </div>
 
-<footer>
-  <div class="wrap">
-    <p><strong>문의</strong> 늘빛관 1층 대학일자리플러스센터 · <a href="tel:055-320-3744">055-320-3744</a></p>
-    <p>문세화 컨설턴트 · 카카오톡 ID <strong>7jobs</strong></p>
-  </div>
-</footer>
-
 <nav class="sticky" aria-label="빠른 신청">
-  <a class="btn o" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000717&amp;dept=03474&amp;no=22&amp;mc=0391" target="_blank" rel="noopener">🎤 면접 특강 신청</a>
-  <a class="btn b" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000666&amp;dept=03917&amp;no=18&amp;mc=0152" target="_blank" rel="noopener">📊 MOS 신청</a>
+  <a class="s1" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000717&amp;dept=03474&amp;no=22&amp;mc=0391" target="_blank" rel="noopener">🎤 면접 특강 신청</a>
+  <a class="s2" href="https://navi.inje.ac.kr/program/E/ProgE0011S.aspx?yy=2026&amp;smt=2&amp;code=000000666&amp;dept=03917&amp;no=18&amp;mc=0152" target="_blank" rel="noopener">📊 MOS 신청</a>
 </nav>
 
 <script>
-  (function () {
-    var els = document.querySelectorAll('.countdown');
-    function tick() {
-      var now = Date.now();
-      els.forEach(function (el) {
-        var diff = new Date(el.dataset.deadline).getTime() - now;
-        var b = el.querySelector('b');
-        if (diff <= 0) { el.innerHTML = '<b>접수 마감 · 센터로 문의해 주세요</b>'; return; }
-        var d = Math.floor(diff / 86400000);
-        var h = Math.floor(diff / 3600000) % 24;
-        var m = Math.floor(diff / 60000) % 60;
-        var s = Math.floor(diff / 1000) % 60;
-        b.textContent = (d > 0 ? d + '일 ' : '') + h + '시간 ' + m + '분 ' + s + '초';
-      });
-    }
-    tick();
-    setInterval(tick, 1000);
-  })();
+(function () {
+  var els = [].slice.call(document.querySelectorAll('.cd b[data-to]'));
+  function pad(x) { return String(x).padStart(2, '0'); }
+  function tick() {
+    var now = Date.now();
+    els.forEach(function (el) {
+      var diff = new Date(el.dataset.to).getTime() - now;
+      if (diff <= 0) { el.textContent = el.dataset.mode === 'clock' ? '마감' : 'D-DAY'; return; }
+      if (el.dataset.mode === 'dday') {
+        el.textContent = 'D-' + Math.ceil(diff / 864e5);
+      } else {
+        var s = Math.floor(diff / 1000), d = Math.floor(s / 86400);
+        el.textContent = (d > 0 ? d + '일 ' : '') + pad(Math.floor(s / 3600) % 24) + ':' + pad(Math.floor(s / 60) % 60) + ':' + pad(s % 60);
+      }
+    });
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  // play one video at a time
+  var vs = [].slice.call(document.querySelectorAll('video'));
+  vs.forEach(function (v) {
+    v.addEventListener('play', function () {
+      vs.forEach(function (o) { if (o !== v) o.pause(); });
+      v.parentNode.classList.add('playing');
+    });
+    v.addEventListener('pause', function () { v.parentNode.classList.remove('playing'); });
+  });
+})();
 </script>
 </body>
 </html>
